@@ -1,5 +1,19 @@
 source "$HOME/.zsh_plugins.zsh"
 
+function source_scripts_recursively {
+  local dir="$1"
+
+  for file in "$dir"/*; do
+    if [[ -d "$file" ]]; then
+      source_scripts_recursively "$file"
+    elif [[ "$file" = *.zsh ]]; then
+      source "$file"
+    fi
+  done
+}
+
+source_scripts_recursively "$HOME/.zsh-extras"
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
