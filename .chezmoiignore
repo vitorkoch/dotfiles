@@ -1,0 +1,2 @@
+dot_zsh-extras/*
+!dot_zsh-extras/README.md
