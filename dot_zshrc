@@ -41,7 +41,5 @@ bindkey "^[[1;5D" backward-word
 nerdfetch -e
 
 eval "$(starship init zsh)"
-eval "$(/home/vitorkoch/.local/bin/mise activate zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
