@@ -38,7 +38,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-nerdfetch -e
+nerdfetch 
 
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
