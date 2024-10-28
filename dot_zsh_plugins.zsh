@@ -34,7 +34,9 @@ zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::sudo
 zinit snippet OMZP::golang
+zinit snippet OMZP::dotnet
 zinit snippet https://raw.githubusercontent.com/fdellwing/zsh-bat/refs/heads/master/zsh-bat.plugin.zsh	
+
 # Load completions
 autoload -Uz compinit && compinit
 zinit cdreplay -q
