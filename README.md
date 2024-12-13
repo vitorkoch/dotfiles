@@ -37,6 +37,8 @@ Directly usable configurations for:
 
 #### Zsh Configuration
 
+> Powered by the "🌻 Flexible and fast ZSH plugin manager" - [Zinit](https://github.com/zdharma-continuum/zinit)
+
 The Zsh setup is located in `.zsh-extras/` and offers powerful customization:
 
 - **Dynamic Sourcing**: A custom `source-all` function recursively sources Zsh configuration files
