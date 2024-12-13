@@ -86,10 +86,7 @@ source $ZSH_EXTRAS/00-source-all.zsh && source-all $ZSH_EXTRAS
 
 The ZSH custom configuration requires the following packages:
 
-- *On-Run Script*:
-  - `cowsay`: Creates ASCII art messages
-  - `lolcat`: Adds colorful rainbow effects to text
-  - `fortune`: Prints random, sometimes humorous quotes
+> None currently 🙈
 
 ## 🖥️ Software Ecosystem
 
