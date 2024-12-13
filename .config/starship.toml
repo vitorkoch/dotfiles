@@ -11,6 +11,8 @@ style_user = 'bright-purple bold'
 format = '[$user]($style)@'
 show_always = true
 
+[gcloud]
+disabled = true
 
 [character]
 success_symbol = '[➜ ](bold green)'

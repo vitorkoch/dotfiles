@@ -25,27 +25,13 @@ zinit light-mode for \
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-zinit light z-shell/zsh-eza
+zinit light MichaelAquilina/zsh-you-should-use
 
-# Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::sudo
-zinit snippet OMZP::golang
-zinit snippet OMZP::dotnet
-zinit snippet OMZP::npm
-zinit snippet OMZP::tmux
-zinit snippet OMZP::rsync
-zinit snippet OMZP::docker
-zinit snippet OMZP::docker-compose
-zinit snippet OMZP::ssh
-zinit snippet OMZP::vscode
-zinit snippet OMZP::systemd
-zinit snippet OMZP::flutter
-zinit snippet OMZP::cp
-
-zinit snippet https://raw.githubusercontent.com/fdellwing/zsh-bat/refs/heads/master/zsh-bat.plugin.zsh	
+if [ ${#OMZ_PLUGINS[@]} -gt 0 ]; then
+    for plugin in "${OMZ_PLUGINS[@]}"; do
+        zinit snippet "OMZP::$plugin"
+    done
+fi
 
 # Load completions
 autoload -Uz compinit && compinit
