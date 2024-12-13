@@ -21,10 +21,11 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
+zinit ice wait lucid
+zinit light zdharma-continuum/fast-syntax-highlighting 
+zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
+zinit ice wait"1" lucid
 zinit light MichaelAquilina/zsh-you-should-use
 
 if [ ${#OMZ_PLUGINS[@]} -gt 0 ]; then

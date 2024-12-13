@@ -1,1 +1,1 @@
-cowsay $(fortune) | lolcat
+
