@@ -103,30 +103,50 @@ The ZSH custom configuration requires the following packages:
 - **Discord Client**: Vesktop
 - **WhatsApp Client**: ZapZap
 
-### Development
+### Development & Tech-things
 
-- **Terminal**: Warp
+### GUI
 - **IDEs**:
   - VSCode (Generic)
   - IntelliJ IDEA (Java/Kotlin)
-- **Containerization**: Docker
+- **Terminal Emulator**: Warp
 
-### Command Line Tools
+#### CLI
 
-- `bat`: Enhanced `cat` alternative
-- `fzf`: Fuzzy finder
-- `zoxide`: Smarter `cd` command
-- `eza`: Modern `ls` replacement
-- `yazi`: Terminal file manager
-- `starship`: Cross-shell prompt
-- `rsync`: Remote file synchronization
-- `direnv`: Environment management
-- `bpytop`: System monitor
-- `tmux`: Terminal multiplexer
-- `less`: Terminal pager
-- `jq`: JSON processor
-- `cowsay`: ASCII art message generator
-- `lolcat`: Colorful text output
+- `bat`: Syntax-highlighted `cat` alternative with line numbering and git integration.
+- `ripgrep`: Ultra-fast recursive text search tool, outperforming traditional grep.
+- `fzf`: Fuzzy finder for interactive file and command searching.
+- `tree`: Recursive directory listing tool showing hierarchical folder structures.
+- `zoxide`: Intelligent `cd` replacement that learns and tracks your most-used directories.
+- `eza`: Modern, feature-rich `ls` alternative with colors and git support.
+- `yazi`: Feature-packed terminal file manager with preview capabilities.
+- `starship`: Minimal, blazing-fast cross-shell prompt with rich customization.
+- `rsync`: Flexible tool for efficient file and directory synchronization.
+- `direnv`: Development environment variable management tool.
+- `bpytop`: Resource-monitoring system utility with an interactive interface.
+- `tmux`: Advanced terminal multiplexer for managing multiple sessions.
+- `screen`: Terminal session manager with detach and reattach capabilities.
+- `less`: Advanced terminal pager for viewing file contents.
+- `jq`: Lightweight command-line JSON processor and transformer.
+- `yq`: Command-line YAML/JSON/XML processor for data manipulation.
+- `cowsay`:  ASCII art message generator with various character styles.
+- `lolcat`: Adds rainbow coloring to text output for fun terminal experience.
+- `httpie`: User-friendly HTTP client with intuitive syntax.
+- `HTTP Prompt`: Interactive HTTP client for API exploration and testing.
+- `mise`: Fast, extensible runtime version manager written in Rust.
+- `tealdeer`: Community-powered CLI help pages (tldr) quick reference tool.
+- `ngrok`: Secure tunneling tool for exposing local servers to the internet.
+- `ffmpeg`: Comprehensive multimedia framework for audio/video processing.
+- `onefetch`: Git repository information viewer with language and stats display.
+- `wget`: Network utility for robust file retrieval across protocols.
+- `trash-cli`: Safe file deletion utility that moves files to system trash.
+- `stow`: Dotfile and configuration management via symlink creation.
+- `make`: Build automation tool for managing software project dependencies.
+- `just`: Modern command runner with simple, readable task definitions (`make` alternative).
+- `serve`: Instant static file hosting for local development.
+- `pm2`: Node.js process manager for deployment and monitoring.
+- `docker`: Containerization platform for consistent application deployment.
+- `docker-compose`: Multi-container Docker application orchestration tool.
 
 ## 🎨 Personal Preferences
 
