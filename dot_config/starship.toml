@@ -1,0 +1,21 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$all$username@$hostname $character"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+
+[gcloud]
+disabled = true
+
+[aws]
+disabled = true
+
+[character]
+success_symbol = '[➜ ](bold green)'
+error_symbol = '[➜ ](bold red)'

@@ -1,168 +1,175 @@
-# Dotfiles :gear:
+# Dotfiles :wrench:
 
-A comprehensive dotfiles repository for streamlined development environment setup.
+This repository contains my personal dotfiles and system configurations, designed to provide a consistent and efficient development environment across different machines.
+
+<div align="center">
+
+![GitHub last commit](https://img.shields.io/github/last-commit/vitorkoch/dotfiles)
+![GitHub stars](https://img.shields.io/github/stars/vitorkoch/dotfiles)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
+
+## ✨ Features
+
+- 🐟 **Fish shell configuration**: A user-friendly and feature-rich shell setup.
+- ⚡ **Ghostty terminal emulator**: A modern, GPU-accelerated terminal emulator configuration.
+- 📝 **Neovim setup with NvChad**: A highly extensible text editor configuration.
+- 🔧 **Mise for version management**: A runtime version manager to keep tools in check.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-Ensure you have the following tools installed:
+To use these dotfiles, ensure the following are installed on your system:
 
-- `git`: Version control system
-- `stow` (optional): Symlink farm manager for managing dotfiles
+- **git**: Version control system for managing your code and configuration.
+- **chezmoi**: Dotfiles manager that applies the configurations to your system.
+- **fzf**: Fuzzy finder for files, commands, etc.
+- **direnv**: Manage environment variables across projects.
+- **zoxide**: A smarter `cd` command with learning capabilities.
+- **starship**: A minimal and fast shell prompt.
+- **mise**: A runtime version manager.
+- **fish**: A user-friendly shell with excellent defaults.
 
 ### Installation
 
-```shell
-# Clone the repository
-git clone https://github.com/vitorkoch/dotfiles $HOME/dotfiles
+To quickly get started, use this one-liner:
 
-# Navigate to the dotfiles directory
-cd $HOME/dotfiles
+```bash
+# One-liner installation
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply vitorkoch
 
-# Use stow (optional) to create symlinks 
-stow .
+# Or, if chezmoi is already installed
+chezmoi init --apply vitorkoch
 ```
 
-## 📂 Repository Structure
+## 💻 My Setup
 
-### Plug and Play Configurations
+### Core Applications
 
-Directly usable configurations for:
+#### Development
 
-- Neovim
-- Starship
-
-### Customized Configurations
-
-#### Zsh Configuration
-
-> Powered by the "🌻 Flexible and fast ZSH plugin manager" - [Zinit](https://github.com/zdharma-continuum/zinit)
-
-The Zsh setup is located in `.zsh-extras/` and offers powerful customization:
-
-- **Dynamic Sourcing**: A custom `source-all` function recursively sources Zsh configuration files
-- **Ordered Configuration**: Files can be prefixed with numbers to control loading order
-- **Oh My Zsh Plugin Management**: Easily specify plugins to load
-
-#### Zsh Plugins
-
-Integrated plugins include:
-
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Adds syntax highlighting to the shell
-- [zsh-completions](https://github.com/zsh-users/zsh-completions): Additional tab completions
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Suggests commands based on history
-- [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use): Reminds you of existing aliases
-
-##### Example Zsh Configuration
-
-```shell
-# .zshrc
-export ZSH_EXTRAS=~/.zsh-extras
-
-# Define Oh My Zsh plugins
-export OMZ_PLUGINS=(
-  git 
-  sudo 
-  rsync 
-  docker 
-  docker-compose
-  ssh 
-  vscode 
-  systemd 
-  cp 
-  direnv
-  starship 
-  zoxide
-)
-
-# Source all Zsh configuration files
-source $ZSH_EXTRAS/00-source-all.zsh && source-all $ZSH_EXTRAS
-
-# Your configuration...
-```
-
-#### Zsh Custom Configuration Requirements
-
-The ZSH custom configuration requires the following packages:
-
-> None currently 🙈
-
-## 🖥️ Software Ecosystem
-
-### Multimedia
-
-- **Browser**: Google Chrome
-- **Media Player**: VLC
-- **Torrent Client**: qBittorrent
-- **PDF Editor**: Xournal++
-- **Whiteboard**: Excalidraw PWA
-
-### Communication
-
-- **Discord Client**: Vesktop
-- **WhatsApp Client**: ZapZap
-
-### Development & Tech-things
-
-### GUI
+- **Terminal**: Ghostty — A modern, GPU-accelerated terminal emulator.
+- **Shell**: Fish — A user-friendly and feature-packed shell.
+- **Editor**: Neovim — A highly extensible text editor, configured with NvChad.
 - **IDEs**:
-  - VSCode (Generic)
-  - IntelliJ IDEA (Java/Kotlin)
-- **Terminal Emulator**: Warp
+  - **VSCode Insiders** — The cutting-edge version of Visual Studio Code.
+  - **IntelliJ IDEA** — A powerful IDE for JVM languages.
 
-#### CLI
+#### Productivity
 
-- `bat`: Syntax-highlighted `cat` alternative with line numbering and git integration.
-- `ripgrep`: Ultra-fast recursive text search tool, outperforming traditional grep.
-- `fzf`: Fuzzy finder for interactive file and command searching.
-- `tree`: Recursive directory listing tool showing hierarchical folder structures.
-- `zoxide`: Intelligent `cd` replacement that learns and tracks your most-used directories.
-- `eza`: Modern, feature-rich `ls` alternative with colors and git support.
-- `yazi`: Feature-packed terminal file manager with preview capabilities.
-- `starship`: Minimal, blazing-fast cross-shell prompt with rich customization.
-- `rsync`: Flexible tool for efficient file and directory synchronization.
-- `direnv`: Development environment variable management tool.
-- `bpytop`: Resource-monitoring system utility with an interactive interface.
-- `tmux`: Advanced terminal multiplexer for managing multiple sessions.
-- `screen`: Terminal session manager with detach and reattach capabilities.
-- `less`: Advanced terminal pager for viewing file contents.
-- `jq`: Lightweight command-line JSON processor and transformer.
-- `yq`: Command-line YAML/JSON/XML processor for data manipulation.
-- `cowsay`:  ASCII art message generator with various character styles.
-- `lolcat`: Adds rainbow coloring to text output for fun terminal experience.
-- `httpie`: User-friendly HTTP client with intuitive syntax.
-- `HTTP Prompt`: Interactive HTTP client for API exploration and testing.
-- `mise`: Fast, extensible runtime version manager written in Rust.
-- `tealdeer`: Community-powered CLI help pages (tldr) quick reference tool.
-- `ngrok`: Secure tunneling tool for exposing local servers to the internet.
-- `ffmpeg`: Comprehensive multimedia framework for audio/video processing.
-- `onefetch`: Git repository information viewer with language and stats display.
-- `wget`: Network utility for robust file retrieval across protocols.
-- `trash-cli`: Safe file deletion utility that moves files to system trash.
-- `stow`: Dotfile and configuration management via symlink creation.
-- `make`: Build automation tool for managing software project dependencies.
-- `just`: Modern command runner with simple, readable task definitions (`make` alternative).
-- `serve`: Instant static file hosting for local development.
-- `pm2`: Node.js process manager for deployment and monitoring.
-- `docker`: Containerization platform for consistent application deployment.
-- `docker-compose`: Multi-container Docker application orchestration tool.
+- **Obsidian** — A knowledge base and note-taking app.
+- **Todoist** — A task management tool.
+- **Google Calendar + Gnome Calendar** — Calendar integration for scheduling.
+- **Bitwarden** — An open-source password manager for secure storage.
 
-## 🎨 Personal Preferences
+### CLI Tools
 
-### Desktop Environment
+Tools that enhance the terminal experience:
 
-- **Favorite DE**: KDE
+- **bat** — A modern `cat` with syntax highlighting and Git integration.
+- **eza** — A modern alternative to `ls` with Git support.
+- **ripgrep** — A lightning-fast search tool for code.
+- **tmux** — A terminal multiplexer for managing multiple sessions.
+- **yazi** — A terminal file manager with image preview.
 
-### Aesthetics
+### System Theme
 
-- **Fonts**:
-  - **UI**: Outfit
-  - **Monospace**: RecMonoDuotone Nerd Font
-- **Icons**: Papirus
-- **Cursor**: Bibata Cursors
-- **Theme**: Catppuccin
+- **Desktop**: GNOME — A modern, intuitive desktop environment.
+- **Theme**: Catppuccin — A soothing pastel theme for the UI.
+- **Font**:
+  - **UI**: Host Grotesk — A clean and readable font for the user interface.
+  - **Code**: CaskaydiaCove Nerd Font — A ligature-enabled font for coding.
+- **Icons**: WhiteSur — A macOS-inspired icon theme.
+- **Cursor**: WhiteSur — A matching cursor theme for consistency.
 
-## 🤝 Create Your Own Dotfiles
+## 📦 Additional Software
 
-Feel free to use this repository as a template for your own dotfiles configuration. Customize, fork, and make it your own!
+<details>
+<summary>Click to expand full software list</summary>
+
+### Development & Tech Tools
+
+- **Docker & Docker Compose** — Containerization and orchestration.
+- **Podman Desktop** — Daemonless container engine GUI.
+- **BeeKeeper Studio** — A modern SQL editor and database manager.
+- **Terraform & Terragrunt** — Infrastructure as code tools.
+- **Ansible** — IT automation platform.
+- **Alpaca** — A UI for local LLMs (large language models).
+- **HTTP Prompt** — An interactive HTTP client.
+- **ngrok** — Secure tunneling to localhost.
+- **pm2** — A process manager for Node.js applications.
+- **serve** — A static file server.
+- **Dev Toolbox** — A collection of developer utilities.
+
+### Media & Communication
+
+- **Google Chrome** — A popular web browser.
+- **VLC** — A versatile media player.
+- **Vesktop (Discord)** — An enhanced Discord client.
+- **ZapZap (WhatsApp)** — A WhatsApp desktop client.
+- **Slack** — Team communication platform.
+- **Thunderbird** — Email and calendar client.
+- **OnlyOffice** — Office suite with collaboration features.
+- **qBittorrent** — Torrent client.
+- **Xournal++** — PDF annotation tool.
+
+### CLI Power Tools
+
+- **rsync** — Efficient file transfer and sync.
+- **btop** — Resource monitor.
+- **screen** — Terminal window manager.
+- **less** — A pager for viewing text files.
+- **jq** — A command-line tool for JSON processing.
+- **yq** — Command-line YAML/XML processor.
+- **cowsay** — ASCII art speech bubble generator.
+- **lolcat** — Adds rainbow text color to output.
+- **httpie** — A user-friendly HTTP client.
+- **tealdeer** — A command-line cheat sheet.
+- **ffmpeg** — Multimedia framework for processing audio/video.
+- **onefetch** — A command to show Git repository summary.
+- **wget** — A command-line tool for retrieving files from the web.
+- **trash-cli** — Safe file deletion utility.
+- **make** — Build automation tool.
+- **just** — A modern command runner.
+
+### Utilities
+
+- **Flameshot** — A feature-rich screenshot tool.
+- **Balena Etcher** — A USB image writer.
+- **Flatseal** — Flatpak permissions manager.
+- **LocalSend** — Local network file sharing tool.
+- **FastFetch** — A system information tool.
+- **What IP** — Tool for discovering IP address information.
+- **Cosmic Store** — System76's app store.
+- **Gear Lever** — AppImage manager.
+- **Bitwarden** — Password manager.
+- **Bottles** — Windows compatibility layer manager.
+- **VirtualBox** — Virtual machine manager.
+
+### Creative & Streaming
+
+- **DaVinci Resolve** — Professional video editing software.
+- **OBS Studio** — Open-source broadcasting software.
+
+### Gaming
+
+- **Steam** — Gaming platform.
+- **Lutris** — Game manager for Linux.
+
+</details>
+
+## ⚙️ Configuration
+
+Most of the configuration is managed through **chezmoi**. You can check the individual config files in the repository for more detailed settings and customizations.
+
+## 🤝 Contributing
+
+Feel free to fork this repository and make it your own! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+---
+
+<div align="center">
+Made with ❤️ by <a href="https://github.com/vitorkoch">vitorkoch</a>
+</div>

@@ -1,0 +1,10 @@
+[tools]
+bun = "latest"
+direnv = "latest"
+go = "latest"
+java = "oracle-graalvm-21.0.2"
+just = "latest"
+node = "lts"
+rust = "latest"
+terraform = "latest"
+"vfox:flutter" = "latest"

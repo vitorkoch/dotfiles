@@ -1,4 +1,6 @@
 README.md
+
 .git
+.gitignore
 
 .config/nvim/lazy-lock.json
